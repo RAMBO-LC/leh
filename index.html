@@ -11,65 +11,48 @@
       href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <section>
 
       <div class="container">
+        <h2 class="main-title">TRIP</h2>
         <h2 class="main-title"><br>LADAKH</h2>
-        <img src="./images/mountainsLake.jfif" class="bg1" alt="" />
+
+        <img src="./images/guru.png" class="bg1" alt="" />
         <img src="./images/mybaby.png" class="babedu" alt="" />
-        <img src="./images/rock1.png" class="rock" alt="" />
       </div>
 
       <div class="content">
-        <div class="content-images">
-          <div >
-            <img class="image" src="./images/NordicLandscape.jpg" alt="" />
-            
-            <h3>Mountains of Himmeltindan</h3>
-            <p class="text">
-              Himmeltindan has the highest elevation of any mountain on the 
-              central Lofoten island of Vestvågøya. One of the highest peaks 
-              in the region and the highest on its island. It provides the best 
-              view of the southeast chain of Lofoten that we saw during our stay. 
-              
-            </p>
-          </div>
-          <div>
-            <img class="image" src="./images/aurora.jfif" alt="" />
-            
-            <h3>Northern Lights at Tromsø</h3>
-            <p class="text">
-              Tromsø is the largest city in Northern Norway. With a location at nearly 70° north, 
-              and between fjords, mountain peaks, and islands, it is a prime starting point 
-              for your Arctic adventure. The city is situated in the middle of the auroral oval, 
-              the area with the highest probability of seeing the northern lights. 
-    
-            </p>
-          </div>
+        <img
+          src="https://t3.ftcdn.net/jpg/06/98/68/42/240_F_698684223_moIBMvCVlEPIhkTUIflNndOzqAds3mKh.jpg"
+          class="content-bg-half"
+          alt=""
+        >
+        <div class="about-text">
+          <h1 style = "text-align: center">ABOUT MY BABY</h1>
+          <p class = "about">So, Meet the girl of my dreams who always manages to be my favorite person and my biggest distraction at the same time.
+
+She's the kind of person who can make an ordinary day feel special without even trying. She'll probably deny being cute, but she's wrong SHE IS DEFINATLY WRONGGGG (and I'll happily remind her milloins of time).
+
+She's stubborn when she wants to be, caring without realizing it, and guess whatt she wants me!!  She laughs at the weirdest things(let her think; so i will see her smile), yeah she overthinks sometimes, and somehow still manages to make my world a little brighter. 
+
+Oh SHI..! my bad; This was supposed to be a trip card. But my my fault tho, cause i always think about you so its valid ig...👉 👈(btw your signature🤭) . But okay It's a tiny reminder that no matter where you go, a part of my heart is always traveling with you cause i always think of youu. So go make amazing memories... and come back with lots of stories for us to laugh about and make me laugh with youu.
+
+And yes... you still owe me a lot of hugs.</p>
         </div>
+        <img src="./images/id.png" class="id-img" alt="Identification" />
       </div>
 
-      <div class="content-2">
-        <div class="content-images-lake">
-          <div>
-            <img class="lake" src="./images/lake.jfif" alt="lake" />
-            <div class="centerLake">
-              <h1>Norway</h1>
-              <h3>Kayaking at Gudvangen</h3>
-            </div>          
-          </div>
-          
+      <div class="content-2" style="display: flex; justify-content: center; align-items: center; padding-top: 5rem;">
+        <div class="card-container">
+            <div class="text-overlay">
+              section 3
+
+            </div>
         </div>
-        <p class="text-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere neque
-          consequuntur a nisi, illo quia cupiditate fuga et eos minima
-          voluptatum cum dolorum quas repellat eaque beatae vitae veritatis
-          quae.
-        </p>
-        
       </div>
 
     </section>
@@ -108,8 +91,7 @@
   height: 100vh;
   width: 100vh;
   z-index: 0;
-  margin-top:2%;
-  right: 17%;
+  right: 0%;
 }
 
 .main-title {
@@ -122,6 +104,50 @@
   transform: translate(-50%, -30%);
 }
 
+.content-bg-half {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.id-img {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  max-width: 40vw;
+  opacity: 0;
+}
+
+.about-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  width: 45%;
+  transform: translateY(-50%);
+  text-align: left;
+}
+.about-text h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+  opacity: 0;
+}
+.about-text p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e0e0e0;
+  white-space: pre-wrap;
+  opacity: 0;
+}
+.about {
+  padding-left: 2rem;
+}
+
 .content, .content-2 {
   width: 100%;
   background: rgb(24, 24, 24);
@@ -130,12 +156,33 @@
   color: #fff;
   position: absolute;
 }
-.content-images, .content-images-lake {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
+.card-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-image: url('https://i.imgur.com/S0X4pSm.png');
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  overflow: hidden;
+}
+.text-overlay {
+  position: absolute;
+  top: 120px;
+  left: 140px;
+  right: 140px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  line-height: 1.8;
+  text-transform: uppercase;
+  text-align: left;
+  text-shadow: 2px 2px 0px #000;
+}
+.closing {
+  text-align: right;
+  margin-top: 30px;
+  display: block;
 }
 .content-images-lake {
   min-height: 60vh;
@@ -144,21 +191,6 @@
   object-fit: cover;
   width: 35rem;
   height: 24rem;
-}
-.lake {
-  object-fit: cover;
-  width: 100%;
-}
-.centerLake {
-  position: absolute;
-  top: 20%;
-  left: 22%;
-  font-size: 4rem;
-  /* text-shadow: 0 0 20px rgba(165, 169, 174,.1); */
-  
-}
-.centerLake h3, .centerLake h1 {
-  text-shadow:  0.5em 0 1em rgba(165, 169, 174,.1);
 }
 .text, .text-2 {
   padding: 2rem 2rem;
@@ -188,11 +220,13 @@ timeline
   .to(".babedu", 20, { y: -450 }, "-=10")
   .fromTo(".bg1", { y: -50 }, { y: 0, duration: 10 }, "-=10")
   .to(".content", 25, { top: "0%" }, "-=20")
-  .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 12 })
-  .fromTo(".text", { opacity: 0.9 }, { opacity: 0.7, duration: 12 })
-  .to(".content-2", 80, { top: "0%" }, "-=10")
-  .fromTo(".content-images-lake", { opacity: 0.5 }, { opacity: 1, duration: 1 })
-  .fromTo(".text-2", { opacity: 0 }, { opacity: 1, duration: 3 })
+  .fromTo(".about-text h1", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 15 }, "-=10")
+  .fromTo(".id-img", { opacity: 0, x: -200 }, { opacity: 1, x: 0, duration: 20 })
+  .fromTo(".about-text p", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 20 }, "-=20")
+  .to(".content-2", 40, { top: "0%" })
+  .to(".id-img", 40, { y: "-100vh" }, "-=40")
+  .to([".about-text h1", ".about-text p"], 40, { opacity: 0, y: -100 }, "-=40")
+  .to(".card-container", 40, { y: "-150vh" })
   ;
 
 let scene = new ScrollMagic.Scene({

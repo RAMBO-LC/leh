@@ -6,4 +6,8 @@ The CDNs from https://greensock.com -
 
 https://greensock.com/tweenmax/ - TweenMax lets you animate literally any property of any object that JavaScript can touch (CSS, SVG, React, Vue, Three.js, canvas, motion paths, generic objects, etc.).
 https://scrollmagic.io/ - ScrollMagic helps you to easily react to the user's current scroll position. Basically combine with the above and helps in scroll animation.
+<<<<<<< HEAD
 https://greensock.com/scrollmagic/ - A GSAP plugin to allow ScrollMagic to take control of your tweens
+=======
+https://greensock.com/scrollmagic/ - A GSAP plugin to allow ScrollMagic to take control of your tweens
+>>>>>>> d9b644a (seccond commit)
