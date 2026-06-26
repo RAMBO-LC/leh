@@ -18,8 +18,7 @@
     <section>
 
       <div class="container">
-        <h2 class="main-title">TRIP</h2>
-        <h2 class="main-title"><br>LADAKH</h2>
+        <h2 class="main-title"><br> &nbsp LADAKH <br> TRIP DUMPS</h2>
 
         <img src="./images/guru.png" class="bg1" alt="" />
         <img src="./images/mybaby.png" class="babedu" alt="" />
@@ -46,12 +45,60 @@ And yes... you still owe me a lot of hugs.</p>
         <img src="./images/id.png" class="id-img" alt="Identification" />
       </div>
 
-      <div class="content-2" style="display: flex; justify-content: center; align-items: center; padding-top: 5rem;">
-        <div class="card-container">
-            <div class="text-overlay">
-              section 3
+      <div class="content-2" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 5rem;">
+        <h1 class="video-title" style="text-align: center; font-size: 2.2rem; margin-bottom: 0.5rem;">And Some Videos...</h1>
+        <div class="video-section memory-gallery">
+          <div class="particles"></div>
 
+          <div class="card-wrapper wrapper-v1">
+            <div class="video-card card-v1" onclick="togglePlay(this)">
+              <video src="./video/bandana-snow.mp4" loop muted playsinline preload="metadata"></video>
+              <div class="play-overlay">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </div>
             </div>
+          </div>
+
+          <div class="card-wrapper wrapper-v2">
+            <div class="video-card card-v2" onclick="togglePlay(this)">
+              <video src="./video/camel.mov" loop muted playsinline preload="metadata"></video>
+              <div class="play-overlay">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper wrapper-v3">
+            <div class="video-card card-v3" onclick="togglePlay(this)">
+              <video src="./video/snowy-scenery.mov" loop muted playsinline preload="metadata"></video>
+              <div class="play-overlay">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="card-wrapper wrapper-v4">
+            <div class="video-card card-v4" onclick="togglePlay(this)">
+              <video src="./video/fitchechk.mov" loop muted playsinline preload="metadata"></video>
+              <div class="play-overlay">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="card-wrapper wrapper-v5">
+            <div class="video-card card-v5" onclick="togglePlay(this)">
+              <video src="./video/casual-window- peek.mov" loop muted playsinline preload="metadata"></video>
+              <div class="play-overlay">
+                <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -116,10 +163,13 @@ And yes... you still owe me a lot of hugs.</p>
 
 .id-img {
   position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  margin: auto;
   max-width: 40vw;
+  max-height: 80vh;
   opacity: 0;
 }
 
@@ -156,33 +206,180 @@ And yes... you still owe me a lot of hugs.</p>
   color: #fff;
   position: absolute;
 }
-.card-container {
+.content-2 {
+  background: linear-gradient(to bottom, rgb(24, 24, 24), #2a1f22);
+}
+
+/* Base Gallery container */
+.memory-gallery {
   position: relative;
-  width: 800px;
-  height: 600px;
-  background-image: url('https://i.imgur.com/S0X4pSm.png');
-  background-size: cover;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  overflow: hidden;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1vh;
 }
-.text-overlay {
+
+/* Particles Background */
+.particles {
   position: absolute;
-  top: 120px;
-  left: 140px;
-  right: 140px;
-  color: white;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 12px;
-  line-height: 1.8;
-  text-transform: uppercase;
-  text-align: left;
-  text-shadow: 2px 2px 0px #000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  background-image: 
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 2px, transparent 2px),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.06) 3px, transparent 3px),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.1) 1.5px, transparent 1.5px),
+    radial-gradient(circle at 70% 90%, rgba(255,255,255,0.05) 2px, transparent 2px);
+  z-index: 0;
+  animation: floatingParticles 20s linear infinite alternate;
 }
-.closing {
-  text-align: right;
-  margin-top: 30px;
+
+@keyframes floatingParticles {
+  0% { transform: translateY(0); opacity: 0.5; }
+  100% { transform: translateY(-20px); opacity: 1; }
+}
+
+/* Wrappers handle layout sizing and floating animation */
+.card-wrapper {
+  position: relative;
+  animation: cardFloat ease-in-out infinite alternate;
+}
+
+@keyframes cardFloat {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.wrapper-v1 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 4; animation-duration: 6s; }
+.wrapper-v2 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 2; animation-duration: 7s; animation-delay: -2s; }
+.wrapper-v3 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 3; animation-duration: 8s; animation-delay: -4s; }
+.wrapper-v4 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 1; animation-duration: 6.5s; animation-delay: -1s; }
+.wrapper-v5 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 5; animation-duration: 7.5s; animation-delay: -3s; }
+
+/* The cards handle styles, aspect ratios, rotation, and hover */
+.video-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease, border-color 0.4s ease;
+  cursor: pointer;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.card-v1 { border-radius: 30px; }
+.card-v2 { border-radius: 30px; }
+.card-v3 { border-radius: 30px; }
+.card-v4 { border-radius: 30px; }
+.card-v5 { border-radius: 30px; }
+
+.card-wrapper:hover {
+  z-index: 10 !important;
+}
+
+.card-wrapper:hover .video-card {
+  transform: scale(1.03) rotate(0deg) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 30px rgba(255, 182, 193, 0.15);
+  border-color: rgba(255, 182, 193, 0.4);
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
   display: block;
+  object-fit: cover;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.card-wrapper:hover .play-overlay {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+.video-card .icon-pause {
+  display: none;
+}
+
+.video-card.playing .icon-play {
+  display: none;
+}
+
+.video-card.playing .icon-pause {
+  display: block;
+  margin-left: 0;
+}
+
+.video-card.playing .play-overlay {
+  opacity: 0.5;
+}
+
+.video-card.playing:hover .play-overlay {
+  opacity: 1;
+}
+
+.play-overlay svg {
+  width: 18px;
+  height: 18px;
+  fill: #fff;
+}
+.play-overlay .icon-play {
+  margin-left: 3px;
+}
+
+@media (max-width: 1024px) {
+  .memory-gallery {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1vh;
+  }
+  .card-wrapper {
+    position: relative;
+    top: auto !important;
+    left: auto !important;
+    width: 80% !important;
+    max-width: 600px;
+  }
+  .wrapper-v3, .wrapper-v4 {
+    width: 60% !important;
+    max-width: 400px;
+  }
+  .video-card {
+    transform: rotate(0) !important;
+  }
+  .particles { display: none; }
+}
+
+@media (max-width: 767px) {
+  .card-wrapper { width: 100% !important; }
+  .wrapper-v3, .wrapper-v4 { width: 80% !important; }
 }
 .content-images-lake {
   min-height: 60vh;
@@ -226,8 +423,27 @@ timeline
   .to(".content-2", 40, { top: "0%" })
   .to(".id-img", 40, { y: "-100vh" }, "-=40")
   .to([".about-text h1", ".about-text p"], 40, { opacity: 0, y: -100 }, "-=40")
-  .to(".card-container", 40, { y: "-150vh" })
+  .to(".video-section", 40, { y: "-100vh" })
+  .to(".video-title", 20, { opacity: 0 }, "-=40")
   ;
+
+function togglePlay(card) {
+  const video = card.querySelector('video');
+  if (video.paused) {
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        card.classList.add('playing');
+      }).catch(error => {
+        console.error("Playback error:", error);
+        alert("Failed to play video 1: " + error.message);
+      });
+    }
+  } else {
+    video.pause();
+    card.classList.remove('playing');
+  }
+}
 
 let scene = new ScrollMagic.Scene({
   triggerElement: "section",
