@@ -18,7 +18,10 @@
     <section>
 
       <div class="container">
-        <h2 class="main-title"><br> &nbsp LADAKH <br> TRIP DUMPS</h2>
+        <div class="title-container">
+          <h2 class="main-title">LADAKH TRIP</h2>
+          <h2 class="main-title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MEDIA DUMP</h2>
+        </div>
 
         <img src="./images/guru.png" class="bg1" alt="" />
         <img src="./images/mybaby.png" class="babedu" alt="" />
@@ -46,7 +49,7 @@ And yes... you still owe me a lot of hugs.</p>
       </div>
 
       <div class="content-2" style="display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 5rem;">
-        <h1 class="video-title" style="text-align: center; font-size: 2.2rem; margin-bottom: 0.5rem;">And Some Videos...</h1>
+        <h1 class="video-title" style="text-align: center; font-size: 2.2rem; margin-bottom: 0.5rem;">And Some Videos That i watched in loops...👉👈</h1>
         <div class="video-section memory-gallery">
           <div class="particles"></div>
 
@@ -100,6 +103,15 @@ And yes... you still owe me a lot of hugs.</p>
           </div>
 
         </div>
+
+<section class="section-4" id="section-4-anchor">
+  <img class="memory-photo" src="./images/apls-baddie.png" alt="Memory" />
+  <img class="memory-photo" src="./images/baddie.png" alt="Memory" />
+  <img class="memory-photo" src="./images/market-baddie.png" alt="Memory" />
+  <img class="memory-photo" src="./images/selfie-alps-cutieeeeeeeeeeeeeeeeeeeeee.png" alt="Memory" />
+  <img class="memory-photo" src="./images/pangong.png" alt="Memory" />
+</section>
+
       </div>
 
     </section>
@@ -115,6 +127,44 @@ And yes... you still owe me a lot of hugs.</p>
   </body>
 
   <style>
+    .section-4 {
+  min-height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  padding: 4rem 1rem;
+  overflow: hidden;
+}
+
+.memory-photo {
+  position: absolute;
+  width: 450px;
+  max-width: 90vw;
+  height: 450px;
+  max-height: 90vw;
+  margin: auto;
+  inset: 0;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 8px solid #f9f9f9;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+
+@media (max-width: 767px) {
+  .memory-photo {
+    width: 300px;
+    height: 300px;
+    border-width: 5px;
+    border-radius: 12px;
+  }
+}
     * {
   margin: 0;
   padding: 0;
@@ -131,24 +181,36 @@ And yes... you still owe me a lot of hugs.</p>
   position: absolute;
   height: 110vh;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 .container .babedu {
   object-fit: cover;
   height: 100vh;
   width: 100vh;
-  z-index: 0;
+  z-index: 1;
   right: 0%;
 }
 
-.main-title {
+.title-container {
   position: absolute;
   top: 28%;
   left: 50%;
-  font-size: 6rem;
+  transform: translate(-50%, -30%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  z-index: 0;
+}
+
+.main-title {
+  font-size: 8rem;
+  line-height: 1.1;
+  margin: 0;
   color: #fff;
   text-shadow: 0 20px 20px rgba(0,0,0,.15);
-  transform: translate(-50%, -30%);
+  text-align: center;
 }
 
 .content-bg-half {
@@ -200,21 +262,24 @@ And yes... you still owe me a lot of hugs.</p>
 
 .content, .content-2 {
   width: 100%;
-  background: rgb(24, 24, 24);
-  min-height: 100vh;
   z-index: 2;
   color: #fff;
   position: absolute;
 }
+.content {
+  background: rgb(24, 24, 24);
+  min-height: 100vh;
+}
 .content-2 {
   background: linear-gradient(to bottom, rgb(24, 24, 24), #2a1f22);
+  min-height: auto;
+  padding-bottom: 0;
 }
 
-/* Base Gallery container */
 .memory-gallery {
   position: relative;
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem 2rem;
   display: flex;
@@ -224,7 +289,6 @@ And yes... you still owe me a lot of hugs.</p>
   gap: 0.1vh;
 }
 
-/* Particles Background */
 .particles {
   position: absolute;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -253,6 +317,7 @@ And yes... you still owe me a lot of hugs.</p>
   0% { transform: translateY(0); }
   100% { transform: translateY(-10px); }
 }
+
 
 .wrapper-v1 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 4; animation-duration: 6s; }
 .wrapper-v2 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 2; animation-duration: 7s; animation-delay: -2s; }
@@ -375,6 +440,11 @@ And yes... you still owe me a lot of hugs.</p>
     transform: rotate(0) !important;
   }
   .particles { display: none; }
+  .main-title { font-size: 5rem; }
+}
+
+@media (max-width: 768px) {
+  .main-title { font-size: 3.5rem; }
 }
 
 @media (max-width: 767px) {
@@ -423,8 +493,6 @@ timeline
   .to(".content-2", 40, { top: "0%" })
   .to(".id-img", 40, { y: "-100vh" }, "-=40")
   .to([".about-text h1", ".about-text p"], 40, { opacity: 0, y: -100 }, "-=40")
-  .to(".video-section", 40, { y: "-100vh" })
-  .to(".video-title", 20, { opacity: 0 }, "-=40")
   ;
 
 function togglePlay(card) {
@@ -453,6 +521,62 @@ let scene = new ScrollMagic.Scene({
   .setTween(timeline)
   .setPin("section")
   .addTo(controller);
+
+document.addEventListener('DOMContentLoaded', () => {
+  const stackContainer = document.getElementById('section-4-anchor');
+  if (!stackContainer) return;
+
+  const photos = Array.from(stackContainer.querySelectorAll('.memory-photo'));
+
+  // 1. Fisher-Yates Shuffle
+  for (let i = photos.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [photos[i], photos[j]] = [photos[j], photos[i]];
+  }
+
+  // 2. Re-append in shuffled order + assign random offsets
+  photos.forEach((photo, index) => {
+    stackContainer.appendChild(photo);
+    photo.style.zIndex = index + 1;
+
+    const rot = (Math.random() * 16) - 8;       // -8deg to +8deg
+    const x = (Math.random() * 160) - 80;        // -80px to +80px
+    const y = (Math.random() * 80) - 40;         // -40px to +40px
+    const scale = 0.95 + (Math.random() * 0.1);  // 0.95 to 1.05
+
+    photo.dataset.rot = rot;
+    photo.dataset.x = x;
+    photo.dataset.y = y;
+    photo.dataset.scale = scale;
+
+    // Initial state (hidden, scaled down, slid down)
+    gsap.set(photo, { opacity: 0, scale: 0.9, y: 100, rotation: 0, x: 0 });
+  });
+
+  // 3. Build the reveal timeline (one card after another)
+  const memoryTimeline = new TimelineMax();
+
+  photos.forEach((photo) => {
+    memoryTimeline.to(photo, 1, {
+      opacity: 1,
+      scale: parseFloat(photo.dataset.scale),
+      x: parseFloat(photo.dataset.x),
+      y: parseFloat(photo.dataset.y),
+      rotation: parseFloat(photo.dataset.rot),
+      ease: "power2.out"
+    });
+  });
+
+  // 4. ScrollMagic scene — pin section while photos deal out
+  new ScrollMagic.Scene({
+    triggerElement: "#section-4-anchor",
+    duration: "300%",  // scroll distance for the dealing animation
+    triggerHook: 0
+  })
+    .setTween(memoryTimeline)
+    .setPin("#section-4-anchor")
+    .addTo(controller);
+});  
 
 
 </script>
