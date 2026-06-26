@@ -54,7 +54,7 @@ And yes... you still owe me a lot of hugs.</p>
 
           <div class="card-wrapper wrapper-v1">
             <div class="video-card card-v1" onclick="togglePlay(this)">
-              <video src="./video/bandana-snow.mp4" loop muted playsinline preload="metadata"></video>
+              <video src="./video/bandana-snow.mp4" loop muted playsinline preload="auto"></video>
               <div class="play-overlay">
                 <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
@@ -64,7 +64,7 @@ And yes... you still owe me a lot of hugs.</p>
 
           <div class="card-wrapper wrapper-v2">
             <div class="video-card card-v2" onclick="togglePlay(this)">
-              <video src="./video/camel.mov" loop muted playsinline preload="metadata"></video>
+              <video src="./video/camel.mov" loop muted playsinline preload="auto"></video>
               <div class="play-overlay">
                 <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
@@ -74,7 +74,7 @@ And yes... you still owe me a lot of hugs.</p>
 
           <div class="card-wrapper wrapper-v3">
             <div class="video-card card-v3" onclick="togglePlay(this)">
-              <video src="./video/snowy-scenery.mov" loop muted playsinline preload="metadata"></video>
+              <video src="./video/snowy-scenery.mov" loop muted playsinline preload="auto"></video>
               <div class="play-overlay">
                 <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
@@ -84,7 +84,7 @@ And yes... you still owe me a lot of hugs.</p>
 
           <div class="card-wrapper wrapper-v4">
             <div class="video-card card-v4" onclick="togglePlay(this)">
-              <video src="./video/fitchechk.mov" loop muted playsinline preload="metadata"></video>
+              <video src="./video/fitchechk.mov" loop muted playsinline preload="auto"></video>
               <div class="play-overlay">
                 <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
@@ -93,7 +93,7 @@ And yes... you still owe me a lot of hugs.</p>
           </div>
           <div class="card-wrapper wrapper-v5">
             <div class="video-card card-v5" onclick="togglePlay(this)">
-              <video src="./video/casual-window- peek.mov" loop muted playsinline preload="metadata"></video>
+              <video src="./video/casual-window- peek.mov" loop muted playsinline preload="auto"></video>
               <div class="play-overlay">
                 <svg class="icon-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                 <svg class="icon-pause" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
@@ -103,6 +103,10 @@ And yes... you still owe me a lot of hugs.</p>
 
         </div>
 
+      </div>
+
+    </section>
+
 <section class="section-4" id="section-4-anchor">
   <img class="memory-photo" src="./images/apls-baddie.png" alt="Memory" />
   <img class="memory-photo" src="./images/baddie.png" alt="Memory" />
@@ -110,10 +114,6 @@ And yes... you still owe me a lot of hugs.</p>
   <img class="memory-photo" src="./images/selfie-alps-cutieeeeeeeeeeeeeeeeeeeeee.png" alt="Memory" />
   <img class="memory-photo" src="./images/pangong.png" alt="Memory" />
 </section>
-
-      </div>
-
-    </section>
 
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
@@ -284,7 +284,7 @@ And yes... you still owe me a lot of hugs.</p>
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.1vh;
+  gap: .1vh;
 }
 
 .particles {
@@ -305,23 +305,16 @@ And yes... you still owe me a lot of hugs.</p>
   100% { transform: translateY(-20px); opacity: 1; }
 }
 
-/* Wrappers handle layout sizing and floating animation */
+/* Wrappers handle layout sizing */
 .card-wrapper {
   position: relative;
-  animation: cardFloat ease-in-out infinite alternate;
 }
 
-@keyframes cardFloat {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
-
-
-.wrapper-v1 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 4; animation-duration: 6s; }
-.wrapper-v2 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 2; animation-duration: 7s; animation-delay: -2s; }
-.wrapper-v3 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 3; animation-duration: 8s; animation-delay: -4s; }
-.wrapper-v4 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 1; animation-duration: 6.5s; animation-delay: -1s; }
-.wrapper-v5 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 5; animation-duration: 7.5s; animation-delay: -3s; }
+.wrapper-v1 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 4; }
+.wrapper-v2 { width: calc(48% - 0.1vh); aspect-ratio: 16/9; z-index: 2; }
+.wrapper-v3 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 3; }
+.wrapper-v4 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 1; }
+.wrapper-v5 { width: calc(32% - 0.1vh); aspect-ratio: 9/16; z-index: 5; }
 
 /* The cards handle styles, aspect ratios, rotation, and hover */
 .video-card {
