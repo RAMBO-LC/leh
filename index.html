@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Baby's Leh trip</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:700|Poppins"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section>
+
+      <div class="container">
+        <h2 class="main-title"><br>LADAKH</h2>
+        <img src="./images/mountainsLake.jfif" class="bg1" alt="" />
+        <img src="./images/mybaby.png" class="babedu" alt="" />
+        <img src="./images/rock1.png" class="rock" alt="" />
+      </div>
+
+      <div class="content">
+        <div class="content-images">
+          <div >
+            <img class="image" src="./images/NordicLandscape.jpg" alt="" />
+            
+            <h3>Mountains of Himmeltindan</h3>
+            <p class="text">
+              Himmeltindan has the highest elevation of any mountain on the 
+              central Lofoten island of Vestvågøya. One of the highest peaks 
+              in the region and the highest on its island. It provides the best 
+              view of the southeast chain of Lofoten that we saw during our stay. 
+              
+            </p>
+          </div>
+          <div>
+            <img class="image" src="./images/aurora.jfif" alt="" />
+            
+            <h3>Northern Lights at Tromsø</h3>
+            <p class="text">
+              Tromsø is the largest city in Northern Norway. With a location at nearly 70° north, 
+              and between fjords, mountain peaks, and islands, it is a prime starting point 
+              for your Arctic adventure. The city is situated in the middle of the auroral oval, 
+              the area with the highest probability of seeing the northern lights. 
+    
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="content-2">
+        <div class="content-images-lake">
+          <div>
+            <img class="lake" src="./images/lake.jfif" alt="lake" />
+            <div class="centerLake">
+              <h1>Norway</h1>
+              <h3>Kayaking at Gudvangen</h3>
+            </div>          
+          </div>
+          
+        </div>
+        <p class="text-2">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere neque
+          consequuntur a nisi, illo quia cupiditate fuga et eos minima
+          voluptatum cum dolorum quas repellat eaque beatae vitae veritatis
+          quae.
+        </p>
+        
+      </div>
+
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+      integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.js"></script>
+    <script src="./script.js"></script>
+  </body>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.container {
+  height: 100vh;
+}
+.container img {
+  width: 100%;
+  position: absolute;
+  height: 110vh;
+  object-fit: cover;
+  z-index: -1;
+}
+.container .babedu {
+  object-fit: cover;
+  height: 100vh;
+  width: 100vh;
+  z-index: 0;
+  margin-top:2%;
+  right: 17%;
+}
+
+.main-title {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  font-size: 6rem;
+  color: #fff;
+  text-shadow: 0 20px 20px rgba(0,0,0,.15);
+  transform: translate(-50%, -30%);
+}
+
+.content, .content-2 {
+  width: 100%;
+  background: rgb(24, 24, 24);
+  min-height: 100vh;
+  z-index: 2;
+  color: #fff;
+  position: absolute;
+}
+.content-images, .content-images-lake {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+}
+.content-images-lake {
+  min-height: 60vh;
+}
+.image {
+  object-fit: cover;
+  width: 35rem;
+  height: 24rem;
+}
+.lake {
+  object-fit: cover;
+  width: 100%;
+}
+.centerLake {
+  position: absolute;
+  top: 20%;
+  left: 22%;
+  font-size: 4rem;
+  /* text-shadow: 0 0 20px rgba(165, 169, 174,.1); */
+  
+}
+.centerLake h3, .centerLake h1 {
+  text-shadow:  0.5em 0 1em rgba(165, 169, 174,.1);
+}
+.text, .text-2 {
+  padding: 2rem 2rem;
+  font-size: 1.1rem;
+}
+
+.button {
+  cursor: pointer;
+  padding: 12px 20px;
+  margin: 0 5px;
+  border-radius: 8px;
+  background-color: transparent;
+}
+.button:hover {
+  background-color: rgba(233, 236, 239, 0.6);
+}
+
+
+    
+</style>
+<script>
+  let controller = new ScrollMagic.Controller();
+let timeline = new TimelineMax();
+
+timeline
+  .to(".rock", 10, { y: -300 })
+  .to(".babedu", 20, { y: -450 }, "-=10")
+  .fromTo(".bg1", { y: -50 }, { y: 0, duration: 10 }, "-=10")
+  .to(".content", 25, { top: "0%" }, "-=20")
+  .fromTo(".content-images", { opacity: 0 }, { opacity: 1, duration: 12 })
+  .fromTo(".text", { opacity: 0.9 }, { opacity: 0.7, duration: 12 })
+  .to(".content-2", 80, { top: "0%" }, "-=10")
+  .fromTo(".content-images-lake", { opacity: 0.5 }, { opacity: 1, duration: 1 })
+  .fromTo(".text-2", { opacity: 0 }, { opacity: 1, duration: 3 })
+  ;
+
+let scene = new ScrollMagic.Scene({
+  triggerElement: "section",
+  duration: "300%",
+  triggerHook: 0,
+})
+  .setTween(timeline)
+  .setPin("section")
+  .addTo(controller);
+
+
+</script>
+</html>
